@@ -23,24 +23,32 @@ $(document).on("click", ".place-button", function () {
     var place = $(this).attr("data-name");
     var apiKey = "feJWVZnjlY4LefnmiZ4S01tqW5mcLCtU";
     var numImages = 10;
-    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=" + apiKey + "&limit=" + numImages + "&q=travel " + place;
+    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=" + apiKey + "&limit=" + numImages + "&q=" + place;
     
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function(response) {
+        console.log(queryURL);
         console.log(response);
         for(var i = 0; i < numImages; i++) {
             var imageURL = response.data[i].images.original_still.url;
             var gifURL = response.data[i].images.original.url;
             var placeImage = $("<img>");
+            var rating = $("<p>");
+            var imageDiv = $("<div>");
+            imageDiv.addClass("image-info");
+            rating.addClass("rating");
+            rating.text("Rating: " + response.data[i].rating);
             placeImage.addClass("place-image")
             placeImage.attr("src", imageURL);
             placeImage.attr("data-still", imageURL);
             placeImage.attr("data-animate", gifURL);
             placeImage.attr("data-state", "still");
+            placeImage.attr("rating", response.data[i].rating);
             placeImage.attr("alt", "destination");
-            $("#image-list").prepend(placeImage);
+            imageDiv.prepend(placeImage).prepend(rating);
+            $("#image-list").prepend(imageDiv);
         }
     });
 });
@@ -55,5 +63,5 @@ $(document).on("click", ".place-image", function() {
       $(this).attr("data-state", "still");
     }
   });
-
+  
 renderButtons();
