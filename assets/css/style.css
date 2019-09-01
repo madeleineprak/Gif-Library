@@ -1,0 +1,5 @@
+.place-image {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+}
