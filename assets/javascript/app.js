@@ -1,0 +1,1 @@
+var topics = ["Bora Bora", "Italy", "Cancun", "Thailand"];
