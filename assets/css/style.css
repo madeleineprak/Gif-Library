@@ -2,6 +2,10 @@ html, body {
     height: 100%; 
 }
 
+body {
+    background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+}
+
 .place-image {
     height: 250px;
     width: 350px;
@@ -68,6 +72,7 @@ h1 {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
+
 button:focus {
     background-color: black;
     box-shadow: 0 5px #666;
