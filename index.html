@@ -1,31 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GIF Getaways</title>
+    <!-- Reset CSS -->
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/b73f20f84b.js"></script> -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Pattaya|Sansita&display=swap" rel="stylesheet">
+    <!-- CSS Styling -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
+
 <body>
     <div class="page-content">
-        <h1>GIF Getaway</h1>
-        <p>Find a getaway from your crazy life with these gifs!</p>
-        <form id ="user-form">
-            <label for="place-input">Add a Place, Yo!</label>
-            <input type="text" id="place-input"><br>
-            <input id="add-place" type="submit" value="Add a Place, Yo!">
-        </form>
-        <div id="button-list"></div>
-        <div id="image-list"></div>
+        <!-- Contains location list and location input form -->
+        <div class="sidebar">
+            <h1>Take A Mental Vacation</h1>
+            <br>
+            <div id="button-list"></div>
+            <br>
+            <!-- Allows user to enter their own location -->
+            <form id="user-form">
+                <label for="place-input">Different destination in mind?</label>
+                <input type="text" id="place-input">
+                <input id="add-place" type="button" class="btn btn-secondary" type="submit" value="+">
+            </form>
+        </div>
+        <!-- Displays the location's images/gifs -->
+        <div class="main">
+            <div id="image-list"></div>
+        </div>
     </div>
     <script src="assets/javascript/app.js"></script>
 </body>
+
 </html>
