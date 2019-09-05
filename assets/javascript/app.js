@@ -1,4 +1,4 @@
-var topics = ['Washington', 'Times Square', 'Hawaii', 'Rome', 'Bankok', 'Paris', 'Northern Lights'];
+var topics = ['Washington', 'Times Square', 'Hawaii', 'Rome', 'Bangkok', 'Paris', 'Northern Lights'];
 
 // Renders the location buttons
 function renderButtons() {
