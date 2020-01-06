@@ -50,12 +50,14 @@ $(document).on("click", ".place-button", function (event) {
             rating.addClass("rating").text("Rating: " + response.data[i].rating);
             placeImage
             .addClass("place-image img-fluid img-thumbnail")
-            .attr("src", imageURL)
-            .attr("data-still", imageURL)
-            .attr("data-animate", gifURL)
-            .attr("data-state", "still");
-            .attr("rating", response.data[i].rating);
-            .attr("alt", "destination");
+            .attr({
+                "src": imageURL, 
+                "data-still": imageURL,
+                "data-animate": gifURL,
+                "data-state": "still",
+                "rating": response.data[i].rating,
+                "alt": "destination"
+            })
             imageDiv.prepend(placeImage).prepend(rating);
             $("#image-list").prepend(imageDiv);
         }
