@@ -8,7 +8,7 @@ This was made possible by [Giphy](https://giphy.com/). The app receives the stil
 Tools utilized:
 * HTML
 * CSS
-* Bootstrap (See documentation [here](https://getbootstrap.com/).)
+* Bootstrap (See [docs](https://getbootstrap.com/))
 * JavaScript
 * jQuery 
 
