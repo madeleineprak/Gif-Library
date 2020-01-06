@@ -48,13 +48,14 @@ $(document).on("click", ".place-button", function (event) {
             var imageDiv = $("<div>");
             imageDiv.addClass("image-info");
             rating.addClass("rating").text("Rating: " + response.data[i].rating);
-            placeImage.addClass("place-image img-fluid img-thumbnail");
-            placeImage.attr("src", imageURL);
-            placeImage.attr("data-still", imageURL);
-            placeImage.attr("data-animate", gifURL);
-            placeImage.attr("data-state", "still");
-            placeImage.attr("rating", response.data[i].rating);
-            placeImage.attr("alt", "destination");
+            placeImage
+            .addClass("place-image img-fluid img-thumbnail")
+            .attr("src", imageURL)
+            .attr("data-still", imageURL)
+            .attr("data-animate", gifURL)
+            .attr("data-state", "still");
+            .attr("rating", response.data[i].rating);
+            .attr("alt", "destination");
             imageDiv.prepend(placeImage).prepend(rating);
             $("#image-list").prepend(imageDiv);
         }
