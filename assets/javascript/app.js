@@ -1,3 +1,4 @@
+// Initial destinations
 var topics = ['Washington', 'Times Square', 'Hawaii', 'Rome', 'Bangkok', 'Paris', 'Northern Lights'];
 
 // Renders the location buttons
