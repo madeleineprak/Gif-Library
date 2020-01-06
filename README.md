@@ -15,7 +15,5 @@ Tools utilized:
 # How To Use it
 Click on any button to view images related to that destination or you can add your own destination on the form. You can also click on each image to see it animate.
 
-
-
 # Author
 [Madeleine Prak](https://github.com/madeleineprak)
