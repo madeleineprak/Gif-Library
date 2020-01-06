@@ -47,8 +47,7 @@ $(document).on("click", ".place-button", function (event) {
             var rating = $("<p>");
             var imageDiv = $("<div>");
             imageDiv.addClass("image-info");
-            rating.addClass("rating");
-            rating.text("Rating: " + response.data[i].rating);
+            rating.addClass("rating").text("Rating: " + response.data[i].rating);
             placeImage.addClass("place-image img-fluid img-thumbnail");
             placeImage.attr("src", imageURL);
             placeImage.attr("data-still", imageURL);
